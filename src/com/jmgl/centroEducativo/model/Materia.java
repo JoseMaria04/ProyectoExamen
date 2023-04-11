@@ -8,7 +8,7 @@ public class Materia {
 	private int idNivel;
 	private String codigo;
 	private String urlClassroom;
-	private  int admiteMatricula;
+	private  boolean admiteMatricula;
 	private Date fechaInicio;
 	
 	/**
@@ -27,7 +27,7 @@ public class Materia {
 	 * @param admiteMatricula
 	 * @param fechaInicio
 	 */
-	public Materia(int id, String nombre, int idNivel, String codigo, String urlClassroom, int admiteMatricula,
+	public Materia(int id, String nombre, int idNivel, String codigo, String urlClassroom, boolean admiteMatricula,
 			Date fechaInicio) {
 		super();
 		this.id = id;
@@ -112,14 +112,14 @@ public class Materia {
 	/**
 	 * @return the admiteMatricula
 	 */
-	public int getAdmiteMatricula() {
+	public boolean isAdmiteMatricula() {
 		return admiteMatricula;
 	}
 
 	/**
 	 * @param admiteMatricula the admiteMatricula to set
 	 */
-	public void setAdmiteMatricula(int admiteMatricula) {
+	public void setAdmiteMatricula(boolean admiteMatricula) {
 		this.admiteMatricula = admiteMatricula;
 	}
 
@@ -131,10 +131,10 @@ public class Materia {
 	}
 
 	/**
-	 * @param fechaInicio the fechaInicio to set
+	 * @param date the fechaInicio to set
 	 */
-	public void setFechaInicio(java.sql.Date fechaInicio) {
-		this.fechaInicio = fechaInicio;
+	public void setFechaInicio(Date date) {
+		this.fechaInicio = date;
 	}
 
 	@Override

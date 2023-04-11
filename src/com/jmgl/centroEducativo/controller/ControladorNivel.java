@@ -14,13 +14,13 @@ public class ControladorNivel {
 	 * 
 	 * @return
 	 */
-	public static List<Nivel> findAll() {
+	public static List<Nivel> findAll(int id) {
 		List<Nivel> nivel = new ArrayList<Nivel>();
 		
 		try {
 			Connection conn = ConnectionManager.getConexion();
 			Statement st = conn.createStatement();
-			ResultSet rs = st.executeQuery("select * from nivel ");
+			ResultSet rs = st.executeQuery("select * from nivel where idCentro = " + id);
 			
 			while (rs.next()) {
 				Nivel n = new Nivel();
